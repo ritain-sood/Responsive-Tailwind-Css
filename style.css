@@ -1,0 +1,23 @@
+
+
+@import "tailwindcss";
+
+
+
+@layer components {
+  /* Define custom components or utilities here */
+}
+
+@layer utilities {
+  .shadow-bottom-sm {
+    box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+
+@theme {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+
+}
