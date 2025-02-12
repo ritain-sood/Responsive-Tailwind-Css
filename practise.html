@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./style.css" type="text/tailwindcss">
+  <style>
+    /* html,
+    body {
+      position: relative;
+      height: 100%;
+    } */
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hidden md:block navBar px-[1rem] md:px-[3rem] lg:px-[5rem]">
+    <div class="flex justify-between p-3 text-sm">
+      <div>
+        <a href="#">rafcart@support.com</a>
+      </div>
+      <div class="space-x-6">
+        <a href="#">Track My Order</a>
+        <a href="#">Login/Register</a>
+        <a href="#">Language</a>
+        <a href="#">Currency</a>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="navBar relative px-[1rem] md:px-[3rem] lg:px-[5rem] pb-2">
+    <div class="relative flex items-center justify-between p-3">
+      <!-- Logo Section -->
+      <div class="flex items-center">
+        <img src="./assests/logo.svg" alt="Logo" class="h-5 md:h-6 lg:h-8">
+      </div>
+
+      <!-- Search Bar (Visible only on medium and larger screens) -->
+      <div class="hidden lg:flex border border-rose-500 rounded-md mx-1.5">
+        <div class="items-center p-3 px-8 text-sm border-r border-rose-500">
+          <span>All Category</span>
+        </div>
+        <div>
+          <input type="text" class="w-[350px] h-full px-2 focus:outline-none" placeholder="Search product...">
+        </div>
+        <div class="bg-rose-500">
+          <button class="text-white py-2 px-[40px]">Search</button>
+        </div>
+      </div>
+
+      <!-- Icon Section -->
+      <div class="flex items-center gap-7">
+        <div class="">
+          <img src="./assests/heart.svg" alt="Wish List" class="h-8">
+          <span class="absolute text-[11px] right-[4rem] md:text-xs bottom-0 md:right-[4rem] lg:right-[7.5rem]">Wish
+            List</span>
+        </div>
+        <div class="hidden lg:block">
+          <img src="./assests/cart.svg" alt="Cart" class="h-8">
+          <span class="absolute text-xs bottom-0 lg:right-[4.5rem]">Cart</span>
+        </div>
+        <div class="">
+          <img src="./assests/account.svg" alt="Account" class="h-8">
+          <span
+            class="absolute text-[11px] right-[0.5rem] md:text-xs bottom-0 md:right-[0.25rem] lg:right-1">Account</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hidden md:block nav-options bg-blue-950 text-white md:px-[3rem] lg:px-[5rem]">
+
+    <div class="flex justify-between h-15">
+      <!-- NavBar Options -->
+
+      <div class="flex items-center">
+
+        <!-- All Categories -->
+        <div class="flex bg-rose-500 w-[10rem] h-full items-center justify-center">
+          <span class="pr-1"><img src="./assests/line_3.svg" class="text-white"></span>
+          <a href="#">All Categories</a>
+        </div>
+        <!-- Other Options -->
+        <div class="flex font-semibold gap-7 pl-7">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Pages</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="flex items-center justify-center text-sm">
+        <img src="./assests/telephone.svg" class="h-4 mr-1">
+        <a href="#">call: +123 456 7890</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Hero Section -->
+
+
+  <!-- <section class="hero-section relative bg-no-repeat bg-cover bg-center min-h-[520px]"
+    style="background-image: url('./assests/banner-1.jpg');">
+    <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
+      <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
+        Best Collection For Home Decoration
+      </span>
+      <span class="max-w-xl text-blue-950">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus accusamus ut dignissimos incidunt repellat
+        deserunt ea. A, amet laborum!
+      </span>
+      <button
+        class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop
+        Now</button>
+    </div>
+  </section> -->
+
+
+  <section class="hero-section relative bg-no-repeat bg-cover bg-center min-h-[520px]">
+    <swiper-container class="mySwiper" space-between="30" hash-navigation-watch-state="true" pagination="true"
+      pagination-clickable="true" navigation="true">
+      
+      <swiper-slide data-hash="slide1">
+        <div class="relative w-full min-h-[520px] bg-no-repeat bg-cover bg-center" style="background-image: url('./assests/banner-1.jpg');">
+          <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
+            <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
+              Best Collection For Home Decoration
+            </span>
+            <span class="max-w-xl text-blue-950">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus accusamus ut dignissimos incidunt repellat deserunt ea. A, amet laborum!
+            </span>
+            <button class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop Now</button>
+          </div>
+        </div>
+      </swiper-slide>
+      
+      <swiper-slide data-hash="slide2">
+        <div class="relative w-full min-h-[520px] bg-no-repeat bg-cover bg-center" style="background-image: url('./assests/banner-2.jpg');">
+          <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
+            <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
+              Enhance Your Living Space
+            </span>
+            <span class="max-w-xl text-blue-950">
+              Discover a wide range of home decor items to transform your space with elegance and style.
+            </span>
+            <button class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop Now</button>
+          </div>
+        </div>
+      </swiper-slide>
+      
+      <swiper-slide data-hash="slide3">
+        <div class="relative w-full min-h-[520px] bg-no-repeat bg-cover bg-center" style="background-image: url('./assests/banner-3.jpg');">
+          <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
+            <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
+              Elevate Your Interior Design
+            </span>
+            <span class="max-w-xl text-blue-950">
+              Find unique and stylish decor pieces to add charm to your home effortlessly.
+            </span>
+            <button class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop Now</button>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </section>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  </html>

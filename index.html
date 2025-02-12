@@ -7,6 +7,7 @@
   <title>Document</title>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./style.css" type="text/tailwindcss">
+  <link rel="stylesheet" href="./swipper.css">
 </head>
 
 <body>
@@ -97,20 +98,52 @@
   <!-- Hero Section -->
 
 
-  <section class="hero-section relative bg-no-repeat bg-cover bg-center min-h-[520px]"
-    style="background-image: url('./assests/banner-1.jpg');">
-    <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
-      <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
-        Best Collection For Home Decoration
-      </span>
-      <span class="max-w-xl text-blue-950">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus accusamus ut dignissimos incidunt repellat
-        deserunt ea. A, amet laborum!
-      </span>
-      <button
-        class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop
-        Now</button>
-    </div>
+  <section class="hero-section relative bg-no-repeat bg-cover bg-center min-h-[520px]">
+    <swiper-container class="mySwiper" space-between="30" hash-navigation-watch-state="true" pagination="true"
+      pagination-clickable="true" navigation="true">
+      
+      <swiper-slide data-hash="slide1">
+        <div class="relative w-full min-h-[520px] bg-no-repeat bg-cover bg-center" style="background-image: url('./assests/banner-1.jpg');">
+          <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
+            <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
+              Best Collection For Home Decoration
+            </span>
+            <span class="max-w-xl text-blue-950">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus accusamus ut dignissimos incidunt repellat deserunt ea. A, amet laborum!
+            </span>
+            <button class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop Now</button>
+          </div>
+        </div>
+      </swiper-slide>
+      
+      <swiper-slide data-hash="slide2">
+        <div class="relative w-full min-h-[520px] bg-no-repeat bg-cover bg-center" style="background-image: url('./assests/banner-2.jpg');">
+          <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
+            <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
+              Enhance Your Living Space
+            </span>
+            <span class="max-w-xl text-blue-950">
+              Discover a wide range of home decor items to transform your space with elegance and style.
+            </span>
+            <button class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop Now</button>
+          </div>
+        </div>
+      </swiper-slide>
+      
+      <swiper-slide data-hash="slide3">
+        <div class="relative w-full min-h-[520px] bg-no-repeat bg-cover bg-center" style="background-image: url('./assests/banner-3.jpg');">
+          <div class="absolute flex flex-col px-[1rem] md:px-[3rem] lg:px-[5rem] space-y-5 top-25">
+            <span class="max-w-lg text-3xl font-semibold text-blue-950 md:text-4xl lg:text-6xl">
+              Elevate Your Interior Design
+            </span>
+            <span class="max-w-xl text-blue-950">
+              Find unique and stylish decor pieces to add charm to your home effortlessly.
+            </span>
+            <button class="px-5 py-3 font-mono font-bold text-white rounded-md bg-rose-500 max-w-fit border border-transparent hover:bg-transparent hover:border-rose-500 hover:text-rose-500 transition-colors duration-300">Shop Now</button>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
   </section>
 
   <!-- Special Features -->
@@ -1059,5 +1092,9 @@
   </section>
 
 </body>
+
+<!-- Swipper Js Link -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 
 </html>
